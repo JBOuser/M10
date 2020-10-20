@@ -1,0 +1,38 @@
+Parking “El Palo”
+
+select
+$__timeGroup("fecha_ultima_actualizacion",'30m' ),
+  avg(libres) as libres_cada_media_hora
+  from ocupacion where poiid
+in (1) GROUP BY time
+ORDER BY time;
+
+
+Parking “Salitre”
+
+select
+$__timeGroup("fecha_ultima_actualizacion",'30m' ),
+  avg(libres) as libres_cada_media_hora
+  from ocupacion where poiid
+in (2) GROUP BY time
+ORDER BY time;
+
+
+Parking “Av. De Andalucía”
+
+select
+$__timeGroup("fecha_ultima_actualizacion",'30m' ),
+  avg(libres) as libres_cada_media_hora
+  from ocupacion where poiid
+in (3) GROUP BY time
+ORDER BY time;
+
+
+Parking Cervantes
+
+select
+$__timeGroup("fecha_ultima_actualizacion",'30m' ),
+  avg(libres) as libres_cada_media_hora
+  from ocupacion where poiid
+in (4) GROUP BY time
+ORDER BY time;
